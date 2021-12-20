@@ -75,6 +75,11 @@ div#pokedex {
     border-radius: 10px;
     max-width: 340px;
     text-align: center;
+    transition: all .2s ease-in-out
+}
+
+.pokemon:hover{
+    transform: scale(1.1);
 }
 
 .pokemon__element1 {

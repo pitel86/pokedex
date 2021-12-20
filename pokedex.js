@@ -40,7 +40,7 @@ const searchPokemon = (name) => {
   }
 };
 
-const drawPokemon = async (pokemon, div$$) => {
+const drawPokemon = (pokemon, div$$) => {
   let pokemonDiv$$ = document.createElement("div");
   pokemonDiv$$.classList.add("pokemon");
   pokemonDiv$$.innerHTML = `
