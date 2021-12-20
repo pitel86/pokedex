@@ -5,6 +5,10 @@ const listDiv$$ = document.querySelector(".listPokemon");
 const myButton$$ = document.querySelector("button");
 const myInput$$ = document.querySelector("input");
 
+myButton$$.addEventListener("click", () => {
+  searchPokemon(myInput$$.value);
+});
+
 const pokedex = async () => {
   for (let i = 1; i <= 151; i++) {
     const res = await fetch(`${pokeUrl}${i}`);
@@ -22,6 +26,18 @@ const drawPokemons = async () => {
     drawPokemon(pokemon, pokedexDiv$$);
   }
   // console.log(pokemons)
+};
+
+
+const searchPokemon = (name) => {
+  listDiv$$.innerHTML = "";
+  const filteredPokemons = myPokemons.filter((pokemon) =>
+    pokemon.name.includes(name)
+  );
+  for (let i = 0; i < filteredPokemons.length; i++) {
+    const pokemon = filteredPokemons[i];
+    drawPokemon(pokemon, listDiv$$);
+  }
 };
 
 const drawPokemon = async (pokemon, div$$) => {
@@ -45,20 +61,7 @@ const drawPokemon = async (pokemon, div$$) => {
   div$$.appendChild(pokemonDiv$$);
 };
 
-myButton$$.addEventListener("click", () => {
-  searchPokemon(myInput$$.value);
-});
 
-const searchPokemon = (name) => {
-  listDiv$$.innerHTML = "";
-  const filteredPokemons = myPokemons.filter((pokemon) =>
-    pokemon.name.includes(name)
-  );
-  for (let i = 0; i < filteredPokemons.length; i++) {
-    const pokemon = filteredPokemons[i];
-    drawPokemon(pokemon, listDiv$$);
-  }
-};
 
 pokedex();
 
