@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.3em;
+    padding: 50px 0;
+    background-image: url(./images/fondo_pokeball.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #030303;
+    background-position-y: -110px;
+}
+
+h1{
+    margin: 30px 0 300px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-shadow: -2px 5px 7px #fb1b1b;
+    text-align: center;
+    font-size: 2rem;
+}
+
+div#pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+.pokemon {
+    padding: 0px;
+    background-color: #ffffff;
+    margin: 20px 10px;
+    border: 10px solid #FB1B1B;
+    border-radius: 10px;
+    max-width: 340px;
+    text-align: center;
+}
+
+.pokemon__element1 {
+    max-width: 100%;
+    padding: 10px 25px;
+    border-bottom: 5px solid #fb1b1b;
+}
+
+img.pokemon__element1--img {
+    object-fit: contain;
+    width: 100%;
+}
+
+.pokemon__element2 {
+    background-color: #000000;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+h2.pokemon__element2--h2 {
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+h3.pokemon__element2--h3 {
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+@media (min-width: 990px) {
+    h1{
+        font-size: 4rem;
+    }
+}
