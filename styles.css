@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 * {
     margin: 0;
@@ -13,6 +14,7 @@ body {
     background-position: top;
     background-color: #030303;
     background-position-y: -110px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 h1{
@@ -23,6 +25,40 @@ h1{
     text-align: center;
     font-size: 2rem;
 }
+
+#searchPokemon{
+    padding: 20px;
+    text-align: center;
+}
+
+div.listPokemon {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+button{
+    padding: 12px 10px;
+    border: none;
+    color: white;
+    background-color: #fb1b1b;
+    font-size: 1.4rem;
+    outline: none;
+    position: relative;
+    top: 0px;
+    left: -6px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+input {
+    padding: 10px 10px;
+    outline: none;
+    font-size: 1.4rem;
+    width: 400px;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
 
 div#pokedex {
     display: flex;
