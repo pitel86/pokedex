@@ -2,11 +2,16 @@ const myPokemons = [];
 const pokeUrl = "https://pokeapi.co/api/v2/pokemon/";
 const pokedexDiv$$ = document.querySelector("#pokedex");
 const listDiv$$ = document.querySelector(".listPokemon");
-const myButton$$ = document.querySelector("button");
+const getPokeButton$$ = document.querySelector(".getPokemon");
+const getTypeButton$$ = document.querySelector(".getType");
 const myInput$$ = document.querySelector("input");
 
-myButton$$.addEventListener("click", () => {
+getPokeButton$$.addEventListener("click", () => {
   searchPokemon(myInput$$.value);
+});
+
+getTypeButton$$.addEventListener("click", () => {
+  searchPokemonByType(myInput$$.value);
 });
 
 const pokedex = async () => {
@@ -33,6 +38,17 @@ const searchPokemon = (name) => {
   listDiv$$.innerHTML = "";
   const filteredPokemons = myPokemons.filter((pokemon) =>
     pokemon.name.includes(name)
+  );
+  for (let i = 0; i < filteredPokemons.length; i++) {
+    const pokemon = filteredPokemons[i];
+    drawPokemon(pokemon, listDiv$$);
+  }
+};
+
+const searchPokemonByType = (typeSearch) => {
+  listDiv$$.innerHTML = "";
+  const filteredPokemons = myPokemons.filter((pokemon) =>
+    pokemon.types.find(mytype => mytype.type.name === typeSearch)
   );
   for (let i = 0; i < filteredPokemons.length; i++) {
     const pokemon = filteredPokemons[i];

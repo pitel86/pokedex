@@ -26,6 +26,13 @@ h1{
     font-size: 2rem;
 }
 
+
+h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
 #searchPokemon{
     padding: 20px;
     text-align: center;
@@ -108,6 +115,7 @@ h3.pokemon__element2--h3 {
     text-transform: capitalize;
     margin: 5px 0;
 }
+
 
 @media (min-width: 990px) {
     h1{
