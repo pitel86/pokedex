@@ -63,7 +63,7 @@ const drawPokemon = (pokemon, div$$) => {
           <div class="pokemon__element1">
             <img class="pokemon__element1--img" src="${
               pokemon.sprites.other["official-artwork"].front_default
-            }">
+            }" alt="${pokemon.name}">
           </div>
           <div class="pokemon__element2">
             <h2 class="pokemon__element2--h2">${pokemon.name}</h2>
