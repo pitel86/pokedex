@@ -54,7 +54,10 @@ button{
     outline: none;
     position: relative;
     top: 0px;
-    left: -6px;
+    width: 350px;
+    margin: 5px 0;
+    max-width: 96%;
+    left: 0px;
     font-family: 'Orbitron', sans-serif;
 }
 
@@ -63,6 +66,7 @@ input {
     outline: none;
     font-size: 1.4rem;
     width: 400px;
+    max-width: 90%;
     font-family: 'Orbitron', sans-serif;
   }
   

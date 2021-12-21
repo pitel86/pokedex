@@ -7,11 +7,11 @@ const getTypeButton$$ = document.querySelector(".getType");
 const myInput$$ = document.querySelector("input");
 
 getPokeButton$$.addEventListener("click", () => {
-  searchPokemon(myInput$$.value);
+  searchPokemon(myInput$$.value.toLowerCase());
 });
 
 getTypeButton$$.addEventListener("click", () => {
-  searchPokemonByType(myInput$$.value);
+  searchPokemonByType(myInput$$.value.toLowerCase());
 });
 
 const pokedex = async () => {
